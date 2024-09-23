@@ -4,12 +4,22 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Container(
+        body: GradientContainer(),
+      ),
+    ),
+  );
+}
+
+
+class GradientContainer extends StatelessWidget {
+  @override
+  Widget build(contex){
+    return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [ 
                 Color.fromARGB(255, 204, 0, 68),
-                Color.fromARGB(255, 0, 102, 204),          
+                Color.fromARGB(255, 3, 95, 31),          
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -22,8 +32,9 @@ void main() {
               style: TextStyle(fontFamily: 'Oswald', color: Colors.white, fontSize: 40),
             ),
           ),
-        ),
-      ),
-    ),
-  );
+        );
+  }
+  
+
+
 }
