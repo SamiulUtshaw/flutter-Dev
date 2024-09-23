@@ -19,7 +19,7 @@ void main() {
           child: const Center(
             child: Text(
               'Hello world',
-              style: TextStyle(fontFamily: 'Oswald', color: Colors.white),
+              style: TextStyle(fontFamily: 'Oswald', color: Colors.white, fontSize: 40),
             ),
           ),
         ),
