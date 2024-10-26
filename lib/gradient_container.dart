@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/style_text.dart';
+
 
 
 var startAlignment = Alignment.topCenter;
@@ -7,23 +7,24 @@ var endAlignment = Alignment.bottomCenter;
 
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
+
   @override
   Widget build(contex){
     return Container(
           decoration:  BoxDecoration(
             gradient: LinearGradient(
-              colors: const [ 
-                Color.fromARGB(255, 46, 49, 146),
-                Color.fromARGB(255, 27, 255, 255),          
-              ],
+              colors: [color1, color2],
               begin: startAlignment,
               end: endAlignment,
               
             ),
           ),
-          child: const Center(
-            child: StyleText(),
+          child: Center(
+            child: Image.asset('assets/images/dice-2.png', width: 150,),
           ),
         );
   }
